@@ -8,6 +8,13 @@ type Project = {
 
 const projects: Project[] = [
   // We’ll replace these with real ones later
+  {
+    title: "Memory Cards Game",
+    summary: "HTML/CSS/JS memory matching game with localStorage.",
+    tags: ["Web", "Game", "JS"],
+    demoUrl: "https://memory-cards-game-one.vercel.app",
+    sourceUrl: "https://github.com/gergo-m/memory-cards-game"
+  },
   { title: "Static Site Samples", summary: "Pure HTML/CSS/JS demos.", tags: ["Web"], sourceUrl: "https://github.com/YOUR_GITHUB" },
   { title: "PHP Blog", summary: "PHP + DB demo (to be deployed).", tags: ["Web","PHP","DB"], sourceUrl: "https://github.com/YOUR_GITHUB" },
   { title: "Android To-Do", summary: "Kotlin app; emulator embed later.", tags: ["Mobile"], sourceUrl: "https://github.com/YOUR_GITHUB" },
