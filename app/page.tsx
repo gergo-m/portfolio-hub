@@ -29,6 +29,15 @@ const projects: Project[] = [
     imageDark: null,
     imageLight: "/images/piar-futar-map_light.png",
   },
+  {
+    title: "Receipt Bill Splitter",
+    summary: "Shopping for multiple people at once? Make splitting the bill low-effort and fair.",
+    tags: ["Python"],
+    demoUrl: "https://receipt-bill-splitter.streamlit.app",
+    sourceUrl: "https://github.com/gergo-m/receipt-bill-splitter",
+    imageDark: "/images/receipt-bill-splitter_dark.png",
+    imageLight: null,
+  },
 ];
 
 export default function Page() {
