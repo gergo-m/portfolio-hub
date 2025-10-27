@@ -108,6 +108,16 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
 }
 
+/* invisible hover bridge to prevent flicker when moving down */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;         /* sits right under the toggle */
+  left: 0;
+  right: 0;
+  height: 10px;      /* the “bridge” height */
+}
+
 .dropdown-toggle {
   cursor: pointer;
   background: none;
@@ -122,45 +132,39 @@ a { color: inherit; text-decoration: none; }
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 110%;
+  top: calc(100% + 2px);   /* close to the toggle (reduce the gap) */
   left: 0;
-  min-width: 160px;
-  background: var(--surface);        /* solid, matches theme surface */
+  min-width: 180px;
+  background: var(--surface);      /* solid */
   border: 1px solid var(--border);
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  z-index: 50;
+  box-shadow: 0 4px 20px rgba(0,0,0,.25);
+  z-index: 200;                     /* above header blur */
 }
 
 /* Show dropdown on hover (desktop) */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+.dropdown:hover .dropdown-content { display: block; }
 
 /* Show dropdown on click (mobile) */
-.dropdown.open .dropdown-content {
-  display: block;
-}
+.dropdown.open .dropdown-content { display: block; }
 
 /* Links inside dropdown */
 .dropdown-content a {
   display: block;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border-radius: 8px;
   text-decoration: none;
   color: var(--text);
   white-space: nowrap;
 }
-
-.dropdown-content a:hover {
-  background: var(--bg-soft);
-}
+.dropdown-content a:hover { background: var(--bg-soft); }
 
 /* Subtle toggle highlight */
 .dropdown:hover .dropdown-toggle,
 .dropdown.open .dropdown-toggle {
   background: var(--bg-soft);
 }
+
 
 /* theme toggle */
 .theme-toggle {
