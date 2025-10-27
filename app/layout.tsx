@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Gergő — Portfolio",
+  title: "Gergő Mindszenti Portfolio",
   description: "Projects by a CS student @ SZTE (exchange @ TU/e)",
 };
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(){
           >
             <a href="/" className="brand">
               <span className="brand-mark" aria-hidden="true"></span>
-              Gergő
+              Gergő Mindszenti
             </a>
 
             <nav className="nav" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function(){
         </header>
 
         <main className="container">{children}</main>
-        <footer className="container footer">© {new Date().getFullYear()} Gergő</footer>
+        <footer className="container footer">© {new Date().getFullYear()} Gergő Mindszenti</footer>
       </body>
     </html>
   );

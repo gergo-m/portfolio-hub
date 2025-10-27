@@ -1,42 +1,51 @@
+"use client";
+
 import { redirect } from "next/dist/server/api-utils";
 import ThemedImage from "./components/ThemedImage";
+import Badge from "./components/Badge";
+import TagFilter from "./components/TagFilter";
+import { FIELD, type Field } from "./lib/fields";
+import { TAG, type TagId } from "./lib/tags";
+import { useMemo, useState } from "react";
 
-type Field = {
+const FIELD_OF_THIS_PAGE = FIELD.main;
+
+type SelectableField = {
   href: string,
   name: string;
   description: string;
   emoji: string;
-  tags: string[];
+  tags: TagId[];
 };
 
-const fields: Field[] = [
+const fields: SelectableField[] = [
   {
     href: "/development",
     name: "Software Development",
     description: "Various projects including web applications, games, and utilities.",
     emoji: "💻",
-    tags: ["Digital", "University"],
+    tags: [TAG.digital, TAG.university],
   },
   {
     href: "/filmmaking",
     name: "Filmmaking",
     description: "Videos and productions that I've worked on.",
     emoji: "🎬",
-    tags: ["Digital", "Hobby"],
+    tags: [TAG.digital, TAG.hobby],
   },
   {
     href: "/university",
     name: "University",
     description: "Coursework highlights @ SZTE and TU/e.",
     emoji: "🎓",
-    tags: ["University"],
+    tags: [TAG.university],
   },
   {
     href: "/about",
     name: "About",
     description: "Learn more about me, my skills, and how to reach me.",
     emoji: "👋",
-    tags: ["Personal"],
+    tags: [TAG.personal],
   }
 ];
 
@@ -60,9 +69,7 @@ export default function Page() {
               </h3>
               <p>{f.description}</p>
               <div className="badges">
-                {f.tags?.map((t) => (
-                  <span className="badge" key={t}>{t}</span>
-                ))}
+                {f.tags.map((id) => <Badge id={id} key={id} />)}
               </div>
             </div>
           </a>
