@@ -102,6 +102,66 @@ a { color: inherit; text-decoration: none; }
 }
 .link:hover { border-color: var(--border); background: var(--surface); transform: translateY(-1px); }
 
+/* --- Dropdown menu --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font: inherit;
+  color: inherit;
+}
+
+/* Dropdown panel */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 160px;
+  background: var(--surface);        /* solid, matches theme surface */
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 50;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Show dropdown on click (mobile) */
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background: var(--bg-soft);
+}
+
+/* Subtle toggle highlight */
+.dropdown:hover .dropdown-toggle,
+.dropdown.open .dropdown-toggle {
+  background: var(--bg-soft);
+}
+
 /* theme toggle */
 .theme-toggle {
   display: inline-flex; align-items: center; gap: 8px;
