@@ -20,6 +20,24 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Receipt Bill Splitter",
+    summary: "Shopping for multiple people at once? Make splitting the bill low-effort and fair.",
+    tags: [TAG.python],
+    demoUrl: "https://receipt-bill-splitter.streamlit.app",
+    sourceUrl: "https://github.com/gergo-m/receipt-bill-splitter",
+    imageDark: "/images/receipt-bill-splitter_dark.png",
+    imageLight: null,
+  },
+  {
+    title: "Chat App",
+    summary: "Web-based simple chat application in Angular and Firebase.",
+    tags: [TAG.web, TAG.ts, TAG.angular, TAG.database],
+    demoUrl: "https://chat-app-pearl-delta.vercel.app",
+    sourceUrl: "https://github.com/gergo-m/chat-app",
+    imageDark: null,
+    imageLight: "/images/chat-app_light.png",
+  },
+  {
     title: "Memory Cards Game",
     summary: "HTML/CSS/JS memory matching game with localStorage.",
     tags: [TAG.web, TAG.game, TAG.js],
@@ -29,6 +47,15 @@ const projects: Project[] = [
     imageLight: "/images/memory-cards-game_light.png",
   },
   {
+    title: "Project & Task Tracker",
+    summary: "Track your projects and tasks with this web app, built for a university course.",
+    tags: [TAG.web, TAG.ts, TAG.angular, TAG.database],
+    demoUrl: "https://ugy-projekt-koveto.web.app",
+    sourceUrl: "https://github.com/gergo-m/project-tracker",
+    imageDark: "/images/project-task-tracker_dark.png",
+    imageLight: null,
+  },
+  {
     title: "Piár Futár Map",
     summary: "Map for high school paper's 20th anniversary.",
     tags: [TAG.web, TAG.js],
@@ -36,15 +63,6 @@ const projects: Project[] = [
     sourceUrl: "https://github.com/gergo-m/piar-futar-map",
     imageDark: null,
     imageLight: "/images/piar-futar-map_light.png",
-  },
-  {
-    title: "Receipt Bill Splitter",
-    summary: "Shopping for multiple people at once? Make splitting the bill low-effort and fair.",
-    tags: [TAG.python],
-    demoUrl: "https://receipt-bill-splitter.streamlit.app",
-    sourceUrl: "https://github.com/gergo-m/receipt-bill-splitter",
-    imageDark: "/images/receipt-bill-splitter_dark.png",
-    imageLight: null,
   },
 ];
 
