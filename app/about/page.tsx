@@ -1,8 +1,14 @@
 export default function About() {
   return (
     <article>
-      <h1>About</h1>
-      <p>I’m a CS student at SZTE (exchange @ TU/e). I enjoy building web backends (PHP), mobile apps, and Python tools.</p>
+      <h1>About Me</h1>
+      <p>Hi, I'm Gergő. Here are the fields that have sparked my interest the most:</p>
+      <ol>
+        <li>Computer Science</li>
+        <li>Sports and nutrition</li>
+        <li>Filmmaking and video editing</li>
+      </ol>
+      <p>Let's dive into each one, my experiences, learning curves, and future plans.</p>
     </article>
   );
 }

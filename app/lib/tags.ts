@@ -7,7 +7,7 @@ export const TAG = {
   ts: "ts",
   python: "python",
   angular: "angular",
-  database: "database",
+  firebase: "firebase",
   short: "short",
   long: "long",
   english: "english",
@@ -123,8 +123,8 @@ export const TAGS: Record<
     colorLight: "hsl(215, 32%, 93%)",
     fields: [FIELD.development],
   },
-  [TAG.database]: {
-    label: "Database",
+  [TAG.firebase]: {
+    label: "Firebase",
     colorDark: "hsl(214, 34%, 20%)",
     colorLight: "hsl(215, 32%, 93%)",
     fields: [FIELD.development],

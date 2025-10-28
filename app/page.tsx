@@ -22,30 +22,30 @@ const fields: SelectableField[] = [
   {
     href: "/development",
     name: "Software Development",
-    description: "Various projects including web applications, games, and utilities.",
+    description: "Creative and technical projects — from web apps to games and tools.",
     emoji: "💻",
-    tags: [TAG.digital, TAG.university],
+    tags: [],
   },
   {
     href: "/filmmaking",
     name: "Filmmaking",
-    description: "Videos and productions that I've worked on.",
+    description: "A collection of short films, edits, and video projects I’ve worked on.",
     emoji: "🎬",
-    tags: [TAG.digital, TAG.hobby],
+    tags: [],
   },
   {
     href: "/university",
     name: "University",
-    description: "Coursework highlights @ SZTE and TU/e.",
+    description: "Highlights from my studies and coursework at SZTE and TU/e.",
     emoji: "🎓",
-    tags: [TAG.university],
+    tags: [],
   },
   {
     href: "/about",
     name: "About",
-    description: "Learn more about me, my skills, and how to reach me.",
+    description: "A bit about who I am, what I do, and how to reach me.",
     emoji: "👋",
-    tags: [TAG.personal],
+    tags: [],
   }
 ];
 
@@ -55,7 +55,8 @@ export default function Page() {
       <header className="hero stack-2">
         <h1 className="hero-title">Hi, I’m Gergő</h1>
         <p className="hero-sub">
-          Computer Science student at the University of Szeged (SZTE), on exchange at Technische Universiteit Eindhoven (TU/e).
+          Computer Science student, video editor, and sports enthusiast.<br></br>
+          Want to hear more? Explore the sections below or go to my <a href="/about">about</a> page!
         </p>
       </header>
 
@@ -68,9 +69,9 @@ export default function Page() {
                 {f.name}
               </h3>
               <p>{f.description}</p>
-              <div className="badges">
+              {/* <div className="badges">
                 {f.tags.map((id) => <Badge id={id} key={id} />)}
-              </div>
+              </div> */}
             </div>
           </a>
         ))}

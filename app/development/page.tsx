@@ -31,7 +31,7 @@ const projects: Project[] = [
   {
     title: "Chat App",
     summary: "Web-based simple chat application in Angular and Firebase.",
-    tags: [TAG.web, TAG.ts, TAG.angular, TAG.database],
+    tags: [TAG.web, TAG.ts, TAG.angular, TAG.firebase],
     demoUrl: "https://chat-app-pearl-delta.vercel.app",
     sourceUrl: "https://github.com/gergo-m/chat-app",
     imageDark: null,
@@ -48,8 +48,8 @@ const projects: Project[] = [
   },
   {
     title: "Project & Task Tracker",
-    summary: "Track your projects and tasks with this web app, built for a university course.",
-    tags: [TAG.web, TAG.ts, TAG.angular, TAG.database],
+    summary: "Track your projects and tasks with this web app.",
+    tags: [TAG.web, TAG.ts, TAG.angular, TAG.firebase],
     demoUrl: "https://ugy-projekt-koveto.web.app",
     sourceUrl: "https://github.com/gergo-m/project-tracker",
     imageDark: "/images/project-task-tracker_dark.png",
@@ -66,7 +66,7 @@ const projects: Project[] = [
   },
 ];
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 const presentTags = Array.from(new Set(projects.flatMap((p) => p.tags)));
 
@@ -79,9 +79,9 @@ export default function Page() {
   return (
     <section className="stack-4">
       <header className="hero stack-2">
-        <h1 className="hero-title">Hi, I’m Gergő</h1>
+        <h1 className="hero-title">Software Development</h1>
         <p className="hero-sub">
-          Computer Science student at the University of Szeged (SZTE), on exchange at Technische Universiteit Eindhoven (TU/e).
+          Explore my previous development endeavours. I have worked on a variety of projects, ranging from web applications to games and practical tools.
         </p>
       </header>
 
